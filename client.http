@@ -33,6 +33,9 @@ Content-Type: application/json
     "category_id": 2
 }
 
+### Random Joke 
+GET http://localhost:3000/api/jokes/random?category=puns
+
 
 
 
