@@ -37,6 +37,18 @@ Content-Type: application/json
 GET http://localhost:3000/api/jokes/random?category=great
 
 
+### Create user
+POST  http://localhost:3000/api/auth/sign_up
+Content-Type: application/json
+
+{
+    "username": "Alex3",
+    "email": "alex3@test.com",
+    "password": "password2",
+    "password_confirmation": "password2"
+}
+
+
 
 
 
