@@ -1,24 +1,9 @@
-# README
+# Installation notes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## master.key and credentials 
+Because it's not good practice to share secrets. This repo is missing a `master.key` file, therefore it is unable to unencrypt `credentials.yml.enc`. For knock to run correctly it requires a *secret_key_base* As such you may encounter an error when trying to generate a jwt if you haven't dealt with this. The best course of action is to delete `credentials.yml.enc` and then run 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+EDITOR="code --wait" rails credentials:edit
+``` 
+In your ternimal, this will generate a new `master.key` and `credentials.yml.enc`
